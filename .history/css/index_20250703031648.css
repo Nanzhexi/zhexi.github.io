@@ -1,0 +1,176 @@
+:root {
+    --primary-color: #0F53FF;
+    --text-primary: #1a1a1a;
+    --text-secondary: #6b7280;
+    --background: #ffffff;
+    --surface: #fafafa;
+    --border: #e5e7eb;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 1px;
+}
+
+/* Main Content */
+.zuopin {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding-top: 60px;
+}
+
+.zuop_box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.zuop_box h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.zuop_box p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.zuop_button {
+    background-color: #0F53FF;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.zuop_button:hover {
+    background-color: #0d47e6;
+    transform: translateY(-1px);
+}
+
+.zuop_button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 0 16px;
+    }
+    
+    .head_nav ul {
+        gap: 24px;
+    }
+    
+    .zuop_box h1 {
+        font-size: 36px;
+    }
+    
+    .zuop_box p {
+        font-size: 14px;
+    }
+    
+    .zuop_box {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .zuop_box h1 {
+        font-size: 28px;
+    }
+    
+    .head_nav ul {
+        gap: 16px;
+    }
+    
+    .head_nav ul li a {
+        font-size: 13px;
+    }
+}

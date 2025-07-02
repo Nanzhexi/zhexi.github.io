@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+#app {
+    width: 100%;
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.head_left {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.head_nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.head_nav ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.head_nav ul li a:hover {
+    color: #0F53FF;
+}
+
+/* Main Content */
+.zuopin {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding-top: 60px;
+}
+
+.zuop_box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.zuop_box h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.zuop_box p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.zuop_button {
+    background-color: #0F53FF;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.zuop_button:hover {
+    background-color: #0d47e6;
+    transform: translateY(-1px);
+}
+
+.zuop_button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 0 16px;
+    }
+    
+    .head_nav ul {
+        gap: 24px;
+    }
+    
+    .zuop_box h1 {
+        font-size: 36px;
+    }
+    
+    .zuop_box p {
+        font-size: 14px;
+    }
+    
+    .zuop_box {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .zuop_box h1 {
+        font-size: 28px;
+    }
+    
+    .head_nav ul {
+        gap: 16px;
+    }
+    
+    .head_nav ul li a {
+        font-size: 13px;
+    }
+}
